@@ -18,8 +18,6 @@ jobs:
 
     - name: Display Directory Structure
       run: ls -R
-    - name: Set Working Directory
-      working-directory: /home/ubuntu/frontend/_work/laghata-frontend/laghata-frontend/frontend
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
