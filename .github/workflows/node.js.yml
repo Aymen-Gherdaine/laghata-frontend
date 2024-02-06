@@ -35,7 +35,7 @@ jobs:
         cache: 'npm'
 
     - name: Set Working Directory
-      run: cd $GITHUB_WORKSPACE/
+      run: cd $GITHUB_WORKSPACE/home/ubuntu/frontend/_work/laghata-frontend/laghata-frontend/frontend
 
     - name: Install Dependencies
       run: npm install
