@@ -16,8 +16,17 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Display Directory Structure
-      run: ls -R /home/ubuntu/frontend/_work/laghata-frontend/laghata-frontend/frontend
+    - name: Display GitHub Workspace
+      run: echo "GitHub Workspace: $GITHUB_WORKSPACE"
+
+    - name: Display GitHub Home
+      run: echo "GitHub Home: $GITHUB_HOME"
+
+    - name: Display Directory Structure (GitHub Workspace)
+      run: ls -R $GITHUB_WORKSPACE
+
+    - name: Display Directory Structure (GitHub Home)
+      run: ls -R $GITHUB_HOME
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -27,7 +36,8 @@ jobs:
 
     - name: Set Working Directory and Install Dependencies
       run: |
-        cd /home/ubuntu/frontend/_work/laghata-frontend/laghata-frontend/frontend
+        cd $GITHUB_WORKSPACE
+        cd path/to/your/project
         npm install
 
     - name: Build
