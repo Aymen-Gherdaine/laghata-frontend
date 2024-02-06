@@ -9,7 +9,7 @@ jobs:
     runs-on: self-hosted
     strategy:
       matrix:
-        node: [ 20 ]
+        node: [20]
     name: Node ${{ matrix.node }} 
     steps:
       - uses: actions/checkout@v4
