@@ -10,17 +10,11 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
-
-    - name: Set Working Directory
-      run: cd /home/ubuntu/frontend/_work/laghata-frontend/laghata-frontend/frontend
-
-    - name: Display Directory Structure
-      run: ls -R
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
