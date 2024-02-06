@@ -23,11 +23,6 @@ jobs:
       run: ls -R
       
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
 
     - name: Install Dependencies
       run: npm install
